@@ -5,9 +5,9 @@
 [![npm](https://img.shields.io/npm/v/quickblox.svg)](https://www.npmjs.com/package/quickblox)
 [![npm](https://img.shields.io/npm/dm/quickblox.svg)](https://www.npmjs.com/package/quickblox)
 
-The QuickBlox JavaScript SDK provides a JavaScript library making it even easier to access the QuickBlox cloud communication backend platform.
+The HiDa! for Web makes it easier, yet the best quality for users.
 
-[QuickBlox](https://quickblox.com) is a suite of communication features & data services (APIs, SDKs, code samples, admin panel, tutorials) which help digital agencies, mobile developers and publishers to add great communication functionality to smartphone applications like in Skype, WhatsApp, Viber.
+HiDa! is a free webRTC based video and audio calling app that allows interaction from any device! It works on multiple platforms(iPhone, Android Phones, Windows and other web-based systems)
 
 Check out our [API Reference](https://quickblox.github.io/quickblox-javascript-sdk/docs/) for more detailed information about our SDK.
 
