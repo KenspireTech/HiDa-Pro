@@ -1,10 +1,10 @@
 # How to contribute
 
-First off, thanks that you help us to make Quickblox better.
+First off, thanks that you help us to make HiDa! better.
 Feedback and suggestions for improvement always welcome :)
 
 ## Coding conventions
-Please follow all rules from our [code style guidelines](https://github.com/QuickBlox/CodeStyle-Guidelines-for-Developers/tree/master/web).
+Please follow all guidelines for open-source.
 
 ## Modify and build the library
 
@@ -23,3 +23,4 @@ To build the library, uses [gulp](http://gulpjs.com/) task runner.
 * Rebuild SDK: `npm run build`, check tests in node / browser env. 
 * Update ./README.md;
 * Make a pull request into gh-pages;
+* We'll check if the update is good;
