@@ -35,7 +35,7 @@ The WEB version of HiDa! currently only works for certain browsers with WebRTC c
 Feedback and suggestions for improvement always welcome :)
 
 # How to contribute
-Wanna contribute to our open source? See more information at [contributing.md](https://github.com/QuickBlox/quickblox-javascript-sdk/blob/gh-pages/.github/CONTRIBUTING.md)
+Wanna contribute to our open source? See more information at [contributing.md](https://github.com/SidDevelop/hida-javascript-web/blob/gh-pages/.github/CONTRIBUTING.md)
 
 # License
 Apache 2.0
