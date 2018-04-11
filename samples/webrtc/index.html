@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>QuickBlox JavaScript WebRTC sample</title>
+    <title>HiDa! - Simple & Secure Video & Audio Conferences</title>
 
     <link rel="canonical" href="https://quickblox.github.io/quickblox-javascript-sdk/samples/webrtc"/>
     <link rel="shortcut icon" href="https://quickblox.com/favicon.ico">
@@ -20,7 +20,7 @@
         <header class="header">
             <div class="inner">
                 <div class="header__logo">
-                    <img class="header__logo_img" src="images/Hida Banner.png"/>
+                    <img class="header__logo_img" src="images/Icon-1024.png"/>
                 </div>
 
                 <h2 class="header__title">HiDa! - Simple & Secure Video & Audio Conferences</h2>
@@ -80,7 +80,7 @@
 
                 <div class="modal-body">
                     <p class="text-danger">
-                        Something wrong with connecting to the server. Check your internet connection or user info and try again.
+                        Error in connecting to the server. Check your internet connection and user info and try again.
                     </p>
                 </div>
                 <p></p>
@@ -152,18 +152,18 @@
     <!-- TEMPLATES -->
         <!-- stateBoard -->
         <script type="text/template" id="tpl_default">
-            QuickBlox room is <b><%= tag %></b>.
+            Chat group: <b><%= tag %></b>.
             Logged in as <b><%= name %></b>
             <button class='fw-link j-logout'>Logout</button>
         </script>
 
         <script type="text/template" id="tpl_during_call">
-            Login in as <b><%= name %></b>
+            Logged in as <b><%= name %></b>
         </script>
 
         <script type="text/template" id="tpl_device_not_found">
             Error: devices (camera or microphone) are not found.
-            <span class="qb-text">Login in <b>as <%=name%></b></span>
+            <span class="qb-text">Logged in <b>as <%=name%></b></span>
             <button class='fw-link j-logout'>Logout</button>
         </script>
 
@@ -198,7 +198,7 @@
         </script>
 
         <script type="text/template" id="tpl_call_stop">
-            Call is stopped.&emsp;
+            Call has stopped.&emsp;
             Login&nbsp;in&nbsp;as&nbsp;<%=name%>
             <button class='fw-link j-logout'>Logout</button>
         </script>
@@ -281,7 +281,6 @@
 
                     <p class="sample_info">
                         The recording time is 10 minutes maximum.
-                        Check out a <a href="https://github.com/QuickBlox/javascript-media-recorder" target="_blank">recorder</a> if want more.
                     </p>
                 </div>
 
@@ -300,7 +299,7 @@
 
                 <div class="caller__frames_bandwidth">
                     <select class="qb-select j-bandwidth">
-                        <option value="">Standart</option>
+                        <option value="">Standard</option>
                         <option value="2048">2048 kbps</option>
                         <option value="1024">1024 kbps</option>
                         <option value="512">512 kbps</option>
