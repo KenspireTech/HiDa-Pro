@@ -20,10 +20,10 @@
         <header class="header">
             <div class="inner">
                 <div class="header__logo">
-                    <img class="header__logo_img" src="images/Logo_qb.svg"/>
+                    <img class="header__logo_img" src="images/Hida Banner.png"/>
                 </div>
 
-                <h2 class="header__title">JavaScript WebRTC Sample</h2>
+                <h2 class="header__title">HiDa! - Simple & Secure Video & Audio Conferences</h2>
                 <span class="j-version header_version"></span>
             </div>
         </header>
@@ -33,20 +33,20 @@
                 <!-- JOIN -->
                 <form class="join j-join">
                     <h3 class="join__title">
-                        <p>Please enter your username and chat room name.</p>
-                        <p>You can join existent chat room.</p>
+                        <p>Please enter your name and a chat group name.</p>
+                        <p>You can join an existing chat group or create a new one.</p>
                         <p class="join__notice">
-                            Use several browsers to simulate several users.
+                            Join now to conference with your partners.
                         </p>
                     </h3>
 
                     <div class="join__body">
                         <div class="join__row">
-                            <input type="text" class="join__input j-join__username" name="username" placeholder="Username" autofocus required title="Field should contain alphanumeric characters only in a range 3 to 20. The first character must be a letter." pattern="^[a-zA-Z][\w]{2,19}$">
+                            <input type="text" class="join__input j-join__username" name="username" placeholder="Your name" autofocus required title="Field should contain alphanumeric characters only in a range 3 to 20. The first character must be a letter." pattern="^[a-zA-Z][\w]{2,19}$">
                         </div>
 
                         <div class="join__row">
-                            <input type="text" class="join__input j-join__room" name="room" placeholder="Chat room name" required title="Field should contain alphanumeric characters only in a range 3 to 15, without space. The first character must be a letter." pattern="^[a-zA-Z][a-zA-Z0-9]{2,14}$">
+                            <input type="text" class="join__input j-join__room" name="room" placeholder="Chat group name" required title="Field should contain alphanumeric characters only in a range 3 to 15, without space. The first character must be a letter." pattern="^[a-zA-Z][a-zA-Z0-9]{2,14}$">
                         </div>
 
                         <div class="join__row">
@@ -61,11 +61,9 @@
         </main>
 
         <footer class="footer j-footer invisible">
-            <p class="j-config footer-config">TEst</p>
+            <p class="j-config footer-config"></p>
             <h4>
-                <a class="fw-link" href="https://github.com/QuickBlox/quickblox-javascript-sdk/tree/gh-pages/samples/webrtc">
-                    Source code
-                </a>
+           
             </h4>
         </footer>
     </div>
@@ -77,12 +75,12 @@
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 
-                    <h4>Connect to chat is failed</h4>
+                    <h4>Connecting to server failed. Please try again.</h4>
                 </div>
 
                 <div class="modal-body">
                     <p class="text-danger">
-                        Something wrong with connect to chat. Check internet connection or user info and trying  again.
+                        Something wrong with connecting to the server. Check your internet connection or user info and try again.
                     </p>
                 </div>
                 <p></p>
@@ -99,7 +97,7 @@
                 </div>
 
                 <div class="modal-body">
-                    <p class="text-danger">User has already authorized.</p>
+                    <p class="text-danger">User already exists.</p>
                 </div>
             </div>
         </div>
@@ -114,7 +112,7 @@
                 </div>
 
                 <div class="modal-body">
-                    <p class="text-danger">Please choose users to call</p>
+                    <p class="text-danger">Please choose users to conference with</p>
                 </div>
             </div>
         </div>
