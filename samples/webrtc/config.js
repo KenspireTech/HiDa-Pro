@@ -2,7 +2,7 @@
     'use strict';
 
     const MESSAGES = {
-        'login': 'Login as any user on this computer and another user on another computer.',
+        'login': 'Login as a user on this computer to start conferencing with your partners.',
         'create_session': 'Creating a session...',
         'connect': 'Connecting...',
         'connect_error': 'Something went wrong with the connection. Check internet connection or user info and try again.',
@@ -10,15 +10,15 @@
         'title_login': 'Choose a user to login with:',
         'title_callee': 'Choose users to call:',
         'calling': 'Calling...',
-        'webrtc_not_avaible': 'WebRTC is not available in your browser',
+        'webrtc_not_avaible': 'WebRTC is not available in your browser. We regret the inconvenience caused.',
         'no_internet': 'Please check your Internet connection and try again'
     };
 
     /** Test server / app by defaults */
     const creds = {
-        'appId': 39854,
-        'authKey': 'JtensAa9y4AM5Yk',
-        'authSecret': 'AsDFwwwxpr3LN5w'
+        'appId': 65623,
+        'authKey': '6VqGaNvMXNWdKNt',
+        'authSecret': '5CrVdpqDKCX-GWg'
     };
 
     const config = {
