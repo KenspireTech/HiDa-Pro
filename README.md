@@ -3,7 +3,7 @@
 
 ## JUMP DIRECTLY TO HIDA! WEB.(Click the WEB picture below)
 
-<a href='http://siddevelop.github.io/hida-javascript-web/samples/webrtc/#join'><img alt='Jump to HiDa! WEB' src='https://n6-img-fp.akamaized.net/free-icon/internet-world_318-30029.jpg?size=338c&ext=jpg'/></a>
+<a href='http://siddevelop.github.io/hida-simple-and-secure-group-video-conferences/samples/webrtc/#join'><img alt='Jump to HiDa! WEB' src='https://n6-img-fp.akamaized.net/free-icon/internet-world_318-30029.jpg?size=338c&ext=jpg'/></a>
 
 
 
