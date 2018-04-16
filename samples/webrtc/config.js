@@ -14,7 +14,6 @@
         'no_internet': 'Please check your Internet connection and try again'
     };
 
-    /** Test server / app by defaults */
     const creds = {
         'appId': 65623,
         'authKey': '6VqGaNvMXNWdKNt',
