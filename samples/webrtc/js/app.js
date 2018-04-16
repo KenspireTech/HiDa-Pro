@@ -19,15 +19,15 @@
                         if(recorder) {
                             recorder.stop();
                         }
-                    }, 1800000); // 30mins
+                    }, 600000); // 10min
                 },
                 onstop: function(blob) {
                     $('.j-record').removeClass('active');
 
-                    var down = confirm('Do you want to download the recorded video of the call?');
+                    var down = confirm('Do you want to download video?');
 
                     if (down) {
-                        recorder.download('HiDa!-Call' + Date.now(), blob);
+                        recorder.download('QB_WEBrtc_sample' + Date.now(), blob);
                     }
 
                     recorder = null;
@@ -60,7 +60,7 @@
                         resolve(res.users);
                     }, function(error) {
                         cb($occupantsCont, error.message);
-                        reject('No users found by Chat Group Name');
+                        reject('Not found users by tag');
                     });
                 });
             }
@@ -211,10 +211,8 @@
         /* Insert version + versionBuild to sample for QA */
         $('.j-version').text('v.' + QB.version + '.' + QB.buildNumber);
         /* Insert info about creds and endpoints */
-//         let configTxt = 'Uses: ' + JSON.stringify(CONFIG.CREDENTIALS) + ',';
-//         configTxt += ' endpoints: ' + (CONFIG.APP_CONFIG.endpoints ? JSON.stringify(CONFIG.APP_CONFIG.endpoints) : 'test server');
-//         $('.j-config').text(configTxt);
-        let configTxt = 'HiDa! - Simple and Secure Group Video Conferences ' + 'v3.5, HiDa! WebRTC v306'
+        let configTxt = 'Uses: ' + JSON.stringify(CONFIG.CREDENTIALS) + ',';
+        configTxt += ' endpoints: ' + (CONFIG.APP_CONFIG.endpoints ? JSON.stringify(CONFIG.APP_CONFIG.endpoints) : 'test server');
         $('.j-config').text(configTxt);
 
         var statesPeerConn = _.invert(QB.webrtc.PeerConnectionState);
@@ -450,7 +448,7 @@
                         });
 
                         // and also send push notification about incoming call
-                        // (currently only iOS/Android users will receive it)
+                        // (corrently only iOS/Android users will receive it)
                         //
                         var params = {
                           notification_type: 'push',
@@ -682,11 +680,6 @@
         $( window ).unload(function() {
             localStorage.removeItem('isAuth');
         });
-       
-//          Reload Browser(Not required)
-//         $( window ).reload(function() {
-//             localStorage.removeItem('isAuth')
-//         });
 
         /**
          * QB Event listener.
@@ -718,13 +711,17 @@
         };
 
         QB.webrtc.onCallStatsReport = function onCallStatsReport(session, userId, stats, error) {
-            $('#bitrate_' + userId).text(stats.inbound_video.bitrate);
-
             console.group('onCallStatsReport');
                 console.log('userId: ', userId);
                 console.log('session: ', session);
                 console.log('stats: ', stats);
             console.groupEnd();
+
+            if (stats.remote.video.bitrate) {
+                $('#bitrate_' + userId).text('video bitrate: ' + stats.remote.video.bitrate);
+            } else if (stats.remote.audio.bitrate) {
+                $('#bitrate_' + userId).text('audio bitrate: ' + stats.remote.audio.bitrate);
+            }
         };
 
         QB.webrtc.onSessionCloseListener = function onSessionCloseListener(session){
