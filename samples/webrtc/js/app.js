@@ -24,10 +24,10 @@
                 onstop: function(blob) {
                     $('.j-record').removeClass('active');
 
-                    var down = confirm('Do you want to download video?');
+                    var down = confirm('Do you want to download the recording?');
 
                     if (down) {
-                        recorder.download('QB_WEBrtc_sample' + Date.now(), blob);
+                        recorder.download('HiDa!_Conference' + Date.now(), blob);
                     }
 
                     recorder = null;
@@ -211,8 +211,9 @@
         /* Insert version + versionBuild to sample for QA */
         $('.j-version').text('v.' + QB.version + '.' + QB.buildNumber);
         /* Insert info about creds and endpoints */
-        let configTxt = 'Uses: ' + JSON.stringify(CONFIG.CREDENTIALS) + ',';
-        configTxt += ' endpoints: ' + (CONFIG.APP_CONFIG.endpoints ? JSON.stringify(CONFIG.APP_CONFIG.endpoints) : 'test server');
+        let configTxt = 'HiDa! - Simple and Secure Video & Audio Conferences v3.5, HiDa! WebRTC v306'
+//         let configTxt = 'Uses: ' + JSON.stringify(CONFIG.CREDENTIALS) + ',';
+//         configTxt += ' endpoints: ' + (CONFIG.APP_CONFIG.endpoints ? JSON.stringify(CONFIG.APP_CONFIG.endpoints) : 'test server');
         $('.j-config').text(configTxt);
 
         var statesPeerConn = _.invert(QB.webrtc.PeerConnectionState);
