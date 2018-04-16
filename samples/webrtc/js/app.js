@@ -19,7 +19,7 @@
                         if(recorder) {
                             recorder.stop();
                         }
-                    }, 600000); // 10min
+                    }, 1800000); // 30mins
                 },
                 onstop: function(blob) {
                     $('.j-record').removeClass('active');
@@ -214,7 +214,7 @@
 //         let configTxt = 'Uses: ' + JSON.stringify(CONFIG.CREDENTIALS) + ',';
 //         configTxt += ' endpoints: ' + (CONFIG.APP_CONFIG.endpoints ? JSON.stringify(CONFIG.APP_CONFIG.endpoints) : 'test server');
 //         $('.j-config').text(configTxt);
-        let configTxt = 'HiDa! - Simple and Secure Group Video Conferences' + 'v3.5, HiDa! WebRTC v306'
+        let configTxt = 'HiDa! - Simple and Secure Group Video Conferences ' + 'v3.5, HiDa! WebRTC v306'
         $('.j-config').text(configTxt);
 
         var statesPeerConn = _.invert(QB.webrtc.PeerConnectionState);
