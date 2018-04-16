@@ -214,7 +214,8 @@
 //         let configTxt = 'Uses: ' + JSON.stringify(CONFIG.CREDENTIALS) + ',';
 //         configTxt += ' endpoints: ' + (CONFIG.APP_CONFIG.endpoints ? JSON.stringify(CONFIG.APP_CONFIG.endpoints) : 'test server');
 //         $('.j-config').text(configTxt);
-        let configTxt = 'HiDa! - HiDa! - Simple and Secure Group Video Conferences' + 'v3.5, HiDa! WebRTC v306'
+        let configTxt = 'HiDa! - Simple and Secure Group Video Conferences' + 'v3.5, HiDa! WebRTC v306'
+        $('.j-config').text(configTxt);
 
         var statesPeerConn = _.invert(QB.webrtc.PeerConnectionState);
 
@@ -679,7 +680,12 @@
 
         /** Close tab or browser */
         $( window ).unload(function() {
-//             localStorage.removeItem('isAuth');
+            localStorage.removeItem('isAuth');
+        });
+       
+//         Reload Browser
+        $( window ).reload(function() {
+            localStorage.removeItem('isAuth')
         });
 
         /**
