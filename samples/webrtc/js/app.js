@@ -680,7 +680,7 @@
 
         /** Close tab or browser */
         $( window ).unload(function() {
-//             localStorage.removeItem('isAuth');
+            localStorage.removeItem('isAuth');
         });
        
 //          Reload Browser(Not required)
