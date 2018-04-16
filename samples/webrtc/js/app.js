@@ -24,10 +24,10 @@
                 onstop: function(blob) {
                     $('.j-record').removeClass('active');
 
-                    var down = confirm('Do you want to download video?');
+                    var down = confirm('Do you want to download the recorded video of the call?');
 
                     if (down) {
-                        recorder.download('QB_WEBrtc_sample' + Date.now(), blob);
+                        recorder.download('HiDa!-Call' + Date.now(), blob);
                     }
 
                     recorder = null;
@@ -60,7 +60,7 @@
                         resolve(res.users);
                     }, function(error) {
                         cb($occupantsCont, error.message);
-                        reject('Not found users by tag');
+                        reject('No users found by Chat Group Name');
                     });
                 });
             }
@@ -211,9 +211,10 @@
         /* Insert version + versionBuild to sample for QA */
         $('.j-version').text('v.' + QB.version + '.' + QB.buildNumber);
         /* Insert info about creds and endpoints */
-        let configTxt = 'Uses: ' + JSON.stringify(CONFIG.CREDENTIALS) + ',';
-        configTxt += ' endpoints: ' + (CONFIG.APP_CONFIG.endpoints ? JSON.stringify(CONFIG.APP_CONFIG.endpoints) : 'test server');
-        $('.j-config').text(configTxt);
+//         let configTxt = 'Uses: ' + JSON.stringify(CONFIG.CREDENTIALS) + ',';
+//         configTxt += ' endpoints: ' + (CONFIG.APP_CONFIG.endpoints ? JSON.stringify(CONFIG.APP_CONFIG.endpoints) : 'test server');
+//         $('.j-config').text(configTxt);
+        let configTxt = 'HiDa! - HiDa! - Simple and Secure Group Video Conferences' + 'v3.5, HiDa! WebRTC v306'
 
         var statesPeerConn = _.invert(QB.webrtc.PeerConnectionState);
 
@@ -448,7 +449,7 @@
                         });
 
                         // and also send push notification about incoming call
-                        // (corrently only iOS/Android users will receive it)
+                        // (currently only iOS/Android users will receive it)
                         //
                         var params = {
                           notification_type: 'push',
@@ -678,7 +679,7 @@
 
         /** Close tab or browser */
         $( window ).unload(function() {
-            localStorage.removeItem('isAuth');
+//             localStorage.removeItem('isAuth');
         });
 
         /**
