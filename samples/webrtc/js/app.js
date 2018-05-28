@@ -129,6 +129,7 @@
                 if (user) {
                     $('.j-join__username').val(user.username);
                     $('.j-join__room').val(user.room);
+                    $('.j-join__email').val(user.email);
                 }
             },
             'dashboard': function() {
