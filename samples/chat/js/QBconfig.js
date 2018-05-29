@@ -34,7 +34,7 @@ var CONSTANTS = {
     ATTACHMENT: {
         TYPE: 'image',
         BODY: '[attachment]',
-        MAXSIZE: 2 * 1000000, // set 2 megabytes,
+        MAXSIZE: 10 * 1000000, // set 2 megabytes,
         MAXSIZEMESSAGE: 'Image is too large. Max size is 2 mb.'
     },
     NOTIFICATION_TYPES: {
