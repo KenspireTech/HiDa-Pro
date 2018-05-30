@@ -19,9 +19,9 @@ var QBconfig = {
 };
 
 var appConfig = {
-    dilogsPerRequers: 15,
-    messagesPerRequest: 50,
-    usersPerRequest: 15,
+    dilogsPerRequers: 30,
+    messagesPerRequest: 100,
+    usersPerRequest: 50,
     typingTimeout: 3 // 3 seconds
 };
 
@@ -32,9 +32,9 @@ var CONSTANTS = {
         PUBLICCHAT: 1
     },
     ATTACHMENT: {
-        TYPE: 'image',
+        TYPE: 'file',
         BODY: '[attachment]',
-        MAXSIZE: 10 * 1000000, // set 2 megabytes,
+        MAXSIZE: 50 * 1000000, // set 50 megabytes,
         MAXSIZEMESSAGE: 'Image is too large. Max size is 2 mb.'
     },
     NOTIFICATION_TYPES: {
