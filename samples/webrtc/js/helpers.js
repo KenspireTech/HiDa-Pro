@@ -122,7 +122,8 @@
                                 'login': userRequiredParams.login,
                                 'password': userRequiredParams.password,
                                 'full_name': data.username,
-                                'tag_list': data.room
+                                'tag_list': data.room,
+                                'email': data.email
                             }, function(createErr, createUser){
                                 if(createErr) {
                                     console.log('[create user] Error:', createErr);
@@ -142,7 +143,8 @@
                             if(loginUser.user_tags !== data.room || loginUser.full_name !== data.username) {
                                 QB.users.update(loginUser.id, {
                                     'full_name': data.username,
-                                    'tag_list': data.room
+                                    'tag_list': data.room,
+                                    'email': data.email
                                 }, function(updateError, updateUser) {
                                     if(updateError) {
                                         console.log('APP [update user] Error:', updateError);
