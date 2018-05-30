@@ -61,8 +61,8 @@ Message.prototype.typingMessage = function (e) {
 Message.prototype.checkMessageSymbolsCount = function() {
     var messageText = document.forms.send_message.message_feald.value,
         sylmbolsCount = messageText.length;
-    if(sylmbolsCount > 1000) {
-        document.forms.send_message.message_feald.value = messageText.slice(0, 1000);
+    if(sylmbolsCount > 100000) {
+        document.forms.send_message.message_feald.value = messageText.slice(0, 100000);
     }
 };
 
