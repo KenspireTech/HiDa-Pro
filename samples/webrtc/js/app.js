@@ -60,7 +60,7 @@
                         resolve(res.users);
                     }, function(error) {
                         cb($occupantsCont, error.message);
-                        reject('Not found users by tag');
+                        reject('No users found in group');
                     });
                 });
             }
