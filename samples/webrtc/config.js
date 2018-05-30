@@ -23,7 +23,7 @@
     const config = {
         debug: true,
         webrtc: {
-            answerTimeInterval: 150,
+            answerTimeInterval: 100,
             dialingTimeInterval: 5,
             disconnectTimeInterval: 35,
             statsReportTimeInterval: 5
