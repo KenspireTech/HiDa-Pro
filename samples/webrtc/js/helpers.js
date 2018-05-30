@@ -181,8 +181,8 @@
 
                     if(result.items.length < 2) {
                         reject({
-                            'title': 'not found',
-                            'message': 'Not found users by tag'
+                            'title': 'No users found',
+                            'message': 'No users found in this group'
                         });
                     } else {
                         resolve({
