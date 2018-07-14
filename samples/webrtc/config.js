@@ -15,9 +15,9 @@
     };
 
     const creds = {
-        'appId': 65623,
-        'authKey': '6VqGaNvMXNWdKNt',
-        'authSecret': '5CrVdpqDKCX-GWg'
+        'appId': 72319,
+        'authKey': 'KYSXO2b5kRDq9fR',
+        'authSecret': 'g9XEqwhWOQk2SE5'
     };
 
     const config = {
