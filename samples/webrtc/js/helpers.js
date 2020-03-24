@@ -105,7 +105,7 @@
 
     app.helpers.join = function(data) {
         var userRequiredParams = {
-            'login': _getUui(CONFIG.CREDENTIALS.appId),
+            'login':data.email,
             'password': 'webAppPass'
         };
 
