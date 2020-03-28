@@ -35,7 +35,7 @@ Login.prototype.login = function (user) {
         }
         QB.createSession(function(csErr, csRes) {
             var userRequiredParams = {
-                'login':user.email,
+                'login':user.login,
                 'password': user.password
             };
             if (csErr) {
@@ -63,7 +63,6 @@ Login.prototype.login = function (user) {
                         if(loginUser.user_tags !== user.tag_list || loginUser.full_name !== user.full_name) {
                             QB.users.update(loginUser.id, {
                                 'full_name': user.full_name,
-                                'email': user.email,
                                 'tag_list': user.tag_list
                             }, function(updateError, updateUser) {
                                 if(updateError) {
@@ -139,11 +138,10 @@ Login.prototype.setListeners = function(){
             userGroup = loginForm.userGroup.value.trim();
 
         var user = {
-            login: email,
+            login: helpers.getUui(),
             password: 'webAppPass',
             full_name: userName,
-            tag_list: userGroup,
-            email: email
+            tag_list: userGroup
         };
 
         localStorage.setItem('user', JSON.stringify(user));
