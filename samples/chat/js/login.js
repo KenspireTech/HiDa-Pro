@@ -35,7 +35,8 @@ Login.prototype.login = function (user) {
         }
         QB.createSession(function(csErr, csRes) {
             var userRequiredParams = {
-                'login':user.login,
+                'login':user.email,
+                'email':user.email,
                 'password': user.password
             };
             if (csErr) {
@@ -138,10 +139,11 @@ Login.prototype.setListeners = function(){
             userGroup = loginForm.userGroup.value.trim();
 
         var user = {
-            login: helpers.getUui(),
+            login: email,
             password: 'webAppPass',
             full_name: userName,
-            tag_list: userGroup
+            tag_list: userGroup,
+            emailID: email
         };
 
         localStorage.setItem('user', JSON.stringify(user));
