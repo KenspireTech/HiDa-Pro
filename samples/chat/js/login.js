@@ -36,7 +36,6 @@ Login.prototype.login = function (user) {
         QB.createSession(function(csErr, csRes) {
             var userRequiredParams = {
                 'login':user.email,
-                'email':user.email,
                 'password': user.password
             };
             if (csErr) {
@@ -64,6 +63,7 @@ Login.prototype.login = function (user) {
                         if(loginUser.user_tags !== user.tag_list || loginUser.full_name !== user.full_name) {
                             QB.users.update(loginUser.id, {
                                 'full_name': user.full_name,
+                                'email': user.email,
                                 'tag_list': user.tag_list
                             }, function(updateError, updateUser) {
                                 if(updateError) {
