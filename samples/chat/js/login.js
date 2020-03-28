@@ -143,7 +143,7 @@ Login.prototype.setListeners = function(){
             password: 'webAppPass',
             full_name: userName,
             tag_list: userGroup,
-            emailID: email
+            email: email
         };
 
         localStorage.setItem('user', JSON.stringify(user));
